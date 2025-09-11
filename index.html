@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HASANAAT ORGANIZATION | Together We Make Change</title></a>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(hsla(123, 98%, 21%, 0.74), rgba(17, 43, 161, 0.6)), url('./PHOTOS/artur-aldyrkhanov-82lWYD-Pquk-unsplash.jpg?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-item .overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+        /* Styles for the image carousel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3; /* Maintain a nice aspect ratio */
+            border-radius: 1rem; /* Corresponds to rounded-xl */
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); /* Corresponds to shadow-2xl */
+        }
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .carousel-image.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-md fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-600">HASANAAT ORGANIZATION</a>
+            <img src="./LOGO_TILL/logo hasanaat.png" width= 50 height= 25></a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-green-600 transition-colors">Home</a>
+                <a href="#about" class="text-gray-600 hover:text-green-600 transition-colors">About Us</a>
+                <a href="projects.html" class="text-gray-600 hover:text-green-600 transition-colors">Projects</a>
+                <a href="photo_Gallary.html" class="text-gray-600 hover:text-green-600 transition-colors">Gallery</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-600 transition-colors">Contact</a>
+            </nav>
+            <a href="Donate_page.html" class="hidden md:inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover:bg-green-700 transition-transform transform hover:scale-105">
+                Donate Now
+            </a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-green-600">Home</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-green-600">About Us</a>
+            <a href="projects.html" class="block py-2 text-gray-600 hover:text-green-600">Our Projects</a>
+            <a href="photo_Gallary.html" class="block py-2 text-gray-600 hover:text-green-600">Gallery</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-green-600">Contact</a>
+            <a href="Donate_page.html" class="block mt-4 bg-blue-600 text-white text-center font-semibold px-6 py-2 rounded-lg shadow-lg hover:bg-green-700">
+                Donate Now
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg min-h-screen flex items-center justify-center pt-20">
+            <div class="container mx-auto px-6 text-center text-white">
+                <!-- Logo -->
+                <div class="mb-6">
+                    <div class="inline-block bg-white/20 backdrop-blur-sm p-4 rounded-full">
+                        <img src="./LOGO_TILL/logo hasanaat.png" width= 200 height= 100></a>
+                    </div>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Together We Make Change.</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200">
+                    We are dedicated to uplifting the needy and empowering communities through compassion, generosity and faith-inspired action.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="Donate_page.html" class="bg-blue-600 text-white font-bold px-8 py-4 rounded-lg shadow-xl hover:bg-green-700 transition-transform transform hover:scale-105">
+                        Make a Donation
+                    </a>
+                    <a href="projects.html" class="bg-white text-green-600 font-bold px-8 py-4 rounded-lg shadow-xl hover:bg-gray-100 transition-transform transform hover:scale-105">
+                        See Our Work
+                    </a>
+                </div>
+            <div class="mt-3 mb-4">
+                <!-- This is the container I modified -->
+                <div class="inline-flex flex-col sm:flex-row items-center justify-center gap-6 bg-white/20 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+                    <!-- Replace with your actual image paths -->
+                    <img src="./LOGO_TILL/Paybill-Poster-Hasanaat_Organization.png" alt="Paybill Poster" class="rounded-md object-contain h-6 sm:h-24">
+                    <img src="./LOGO_TILL/Till.png" alt="Till Number" class="rounded-md object-contain h-6 sm:h-24">
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Mission</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">"Whoever relieves a believer's distress of the distressful aspects of this world, Allah will rescue him from a difficulty of the difficulties of the Hereafter." - Prophet Muhammad (ﷺ)</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <!-- Image Carousel -->
+                    <div class="md:w-1/2">
+                        <div id="about-carousel" class="carousel-container">
+                            <img src="./PHOTOS/IMG-Books Donation.jpg" alt="Volunteers distributing aid packages" class="carousel-image active">
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-700">Who We Are</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                           Hasanaat Organization is a Muslim charitable institution founded on the timeless Islamic principles of Zakat and Sadaqah, guided by compassion, empathy and a strong sense of social responsibility. Our mission is to be a beacon of hope and a source of relief for the most vulnerable members of society, irrespective of their faith, background or social status.</p>
+                           At Hasanaat, we believe that true service goes beyond providing temporary assistance; it is about empowering individuals and communities to build a dignified and sustainable future. Through various programs—ranging from food and water distribution, educational support, healthcare assistance and livelihood initiatives we strive to uplift lives, restore hope and nurture resilience.</P>
+                           Our work is made possible through the generosity of donors and the commitment of volunteers who embody the spirit of giving. Together, we are creating meaningful change and ensuring that every act of kindness contributes to a brighter tomorrow.</P>
+                           Hasanaat Organization is more than just a charity—it is a movement of compassion, where collective efforts bring relief to those in need and opportunities to those who have been left behind. By joining hands with us, you become part of a mission dedicated to building communities rooted in dignity, hope and shared humanity.
+                        </p>
+                        <div class="mt-8 grid grid-cols-2 gap-6 text-center">
+                            <div class="bg-green-50 p-6 rounded-lg">
+                                <h4 class="text-3xl font-bold text-green-600">10,000+</h4>
+                                <p class="text-gray-600">Quran Donations</p>
+                            </div>
+                            <div class="bg-green-50 p-6 rounded-lg">
+                                <h4 class="text-3xl font-bold text-green-600">5,000+</h4>
+                                <p class="text-gray-600">Meals Served</p>
+                            </div>
+                            <div class="bg-green-50 p-6 rounded-lg">
+                                <h4 class="text-3xl font-bold text-green-600">20+</h4>
+                                <p class="text-gray-600">Projects Completed</p>
+                            </div>
+                            <div class="bg-green-50 p-6 rounded-lg">
+                                <h4 class="text-3xl font-bold text-green-600">500+</h4>
+                                <p class="text-gray-600">Ghusl Items Purchase</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Projects Section -->
+        <section id="projects" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Key Projects</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">We focus on critical areas to create lasting change and empower communities from the ground up.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="./PHOTOS/IMG - Quran Donations.jpg" alt="Food Drive" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Quran Donations</h3>
+                            <p class="text-gray-600 mb-4">Distributing copies of the Holy Quran to individuals and institutions to spread divine knowledge and guidance.</p>
+                            <a href="projects.html" class="font-semibold text-green-600 hover:text-green-700">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="./PHOTOS/IMG - Quran Donations.jpg">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Islamic Books Donation</h3>
+                            <p class="text-gray-600 mb-4">Providing educational Islamic literature to libraries and communities to foster deeper understanding and faith.</p>
+                            <a href="projects.html" class="font-semibold text-green-600 hover:text-green-700">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="IMG-Food Drive.jpg" alt="Orphan and Child Care" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Hasanaat Food Drive</h3>
+                            <p class="text-gray-600 mb-4">Organizing food drives to supply essential meals and groceries to families in need, ensuring no one goes hungry.</p>
+                            <a href="projects.html" class="font-semibold text-green-600 hover:text-green-700">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 4 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="./PHOTOS/IMG-Ghusl room Construction.jpg" alt="Orphan and Child Care" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Ghusl Room Construction</h3>
+                            <p class="text-gray-600 mb-4">Building and equipping dedicated facilities for the ritual washing of the deceased to uphold Islamic funeral rites.</p>
+                            <a href="projects.html" class="font-semibold text-green-600 hover:text-green-700">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 5 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="./PHOTOS/IMG-Prison Visit.jpg" alt="Orphan and Child Care" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Prison Dawah Visits</h3>
+                            <p class="text-gray-600 mb-4">Conducting visits to correctional facilities to provide spiritual guidance, support, and Islamic knowledge to inmates.</p>
+                            <a href="projects.html" class="font-semibold text-green-600 hover:text-green-700">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 6 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="./PHOTOS/IMG-Tiling of Imam House.jpg" alt="Orphan and Child Care" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Imam's Residence Renovation</h3>
+                            <p class="text-gray-600 mb-4">Supporting our community leaders by improving their residences, including essential tiling and repair work.</p>
+                            <a href="projects.html" class="font-semibold text-green-600 hover:text-green-700">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Voices of Gratitude</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Hear directly from the people whose lives have been changed by your generosity.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <i data-lucide="quote" class="w-10 h-10 text-green-200 mb-4"></i>
+                        <p class="text-gray-600 mb-6">"The food package from HASANAAT ORGANIZATION came when we had nothing. It was a true blessing from Allah. My children could finally eat a full meal. Thank you for your kindness."</p>
+                        <div class="font-bold text-gray-800">- Fatima, Mother of three</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <i data-lucide="quote" class="w-10 h-10 text-green-200 mb-4"></i>
+                        <p class="text-gray-600 mb-6">"For years, we walked miles to fetch dirty water. The new well in our village has changed everything. Our children are healthier, and we have more time for farming."</p>
+                        <div class="font-bold text-gray-800">- Ali, Village Elder</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <i data-lucide="quote" class="w-10 h-10 text-green-200 mb-4"></i>
+                        <p class="text-gray-600 mb-6">"As an orphan, I thought my dream of education was over. The sponsorship from HASANAAT ORGANIZATION gave me a chance to go to school and hope for a better future."</p>
+                        <div class="font-bold text-gray-800">- Yusuf, Student</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <i data-lucide="quote" class="w-10 h-10 text-green-200 mb-4"></i>
+                        <video width="240" height="400" controls>
+                        <source src="./video/VID-Quran Donation Appreciation.mp4" type="video/mp4">
+                        <p class="text-gray-600 mb-6">"Quran Donation Appreciation"</p>
+                        <div class="font-bold text-gray-800">- Yusuf, Student</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Get In Touch</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Have questions or want to get involved? We'd love to hear from you.</p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center gap-12 mb-12">
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-green-100 p-3 rounded-full">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-left">Our Office</h3>
+                            <p class="text-gray-600 text-left">Arabuko Plaza, Kilifi, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-green-100 p-3 rounded-full">
+                            <i data-lucide="phone" class="w-6 h-6 text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-left">Call Us</h3>
+                            <p class="text-gray-600 text-left">+254 740780942 / +254 718699690</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="mailto:hasanaatorganization@gmail.com?subject=Inquiry from HASANAAT ORGANIZATION Website" class="inline-block bg-blue-600 text-white font-bold text-lg py-4 px-10 rounded-lg shadow-lg hover:bg-green-700 transition-transform transform hover:scale-105">
+                    Email Us Directly
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+                <!-- Organization Info -->
+                <div class="flex-shrink-0">
+                    <h3 class="text-2xl font-bold text-white mb-2">HASANAAT ORGANIZATION</h3>
+                    <p class="text-gray-300 max-w-sm">Together We Make Change.</p>
+                </div>
+
+                <!-- Navigation and Socials -->
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <!-- Page Links -->
+                    <ul class="flex space-x-6">
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a></li>
+                        <li><a href="projects.html" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a></li>
+                        <li><a href="Donate_page.html" class="text-gray-300 hover:text-white transition-colors duration-300">Donate</a></li>
+                        <li><a href="photo_Gallary.html" class="text-gray-300 hover:text-white transition-colors duration-300">Gallery</a></li>
+                    </ul>
+
+                    <!-- Social Media Icons -->
+                    <div class="flex space-x-4">
+                        <!-- Replace '#' with your actual profile links -->
+                        <a href="#" aria-label="Facebook profile" class="text-gray-300 hover:text-white transition-colors duration-300"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" aria-label="Twitter profile" class="text-gray-300 hover:text-white transition-colors duration-300"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                        <a href="#" aria-label="Instagram profile" class="text-gray-300 hover:text-white transition-colors duration-300"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="https://wa.me/+254740780942" aria-label="Instagram profile" class="text-gray-300 hover:text-white transition-colors duration-300"><i data-lucide="WhatsApp" class="w-6 h-6"></i></a>
+                        
+                        <!-- WhatsApp Icon (Using an inline SVG as Lucide doesn't have a specific WhatsApp icon) -->
+                        <a href="https://wa.me/+254740780942" aria-label="Chat on WhatsApp" class="text-gray-300 hover:text-white transition-colors duration-300">
+                           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.31 20.6C8.75 21.41 10.36 21.82 12.04 21.82C17.5 21.82 21.95 17.37 21.95 11.91C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.71 20.28 11.91C20.28 16.47 16.65 20.1 12.04 20.1C10.48 20.1 8.99 19.68 7.67 18.91L7.29 18.69L4.63 19.37L5.32 16.78L5.09 16.4C4.28 15.02 3.8 13.48 3.8 11.91C3.8 7.35 7.43 3.67 12.04 3.67M9.13 8.5C8.91 8.5 8.7 8.59 8.55 8.74C8.4 8.89 8.07 9.22 8.07 9.87C8.07 10.52 8.55 11.14 8.66 11.26C8.77 11.38 10.03 13.35 11.94 14.13C13.85 14.92 13.85 14.59 14.21 14.54C14.58 14.48 15.53 13.94 15.71 13.36C15.89 12.78 15.89 12.29 15.82 12.18C15.75 12.06 15.61 12.03 15.38 11.91C15.15 11.79 14 11.23 13.78 11.14C13.55 11.05 13.41 11.02 13.26 11.26C13.12 11.5 12.7 11.97 12.58 12.12C12.46 12.26 12.35 12.29 12.12 12.18C11.89 12.06 11.08 11.8 10.12 10.95C9.35 10.27 8.83 9.42 8.68 9.18C8.53 8.94 8.65 8.82 8.74 8.73C8.83 8.64 8.94 8.5 9.02 8.38C9.1 8.26 9.13 8.18 9.07 8.03C9 7.88 8.7 7.17 8.59 6.93C8.48 6.69 8.36 6.75 8.24 6.75"/></svg>
+                        </a>
+                        <a href="https://tiktok.com/@hasanaat.organization" aria-label="TikTok profile" class="text-gray-300 hover:text-white transition-colors duration-300">
+                            <!-- TikTok Icon (Using an inline SVG) -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-2.43.05-4.84-.95-6.43-2.88-1.59-1.93-2.15-4.52-1.72-7.18.25-1.58.82-3.13 1.69-4.52.54-.86 1.17-1.68 1.88-2.43.39-.42.81-.82 1.26-1.2.4-.33.82-.64 1.27-.92.21-.13.43-.25.65-.36.27-.14.54-.26.83-.35.34-.1.69-.15 1.04-.16.04 1.54.02 3.08.01 4.62-.24.04-.48.09-.71.15-.43.11-.85.27-1.25.46-.29.13-.57.29-.84.46-.57.36-1.08.8-1.51 1.31-.33.39-.62.82-.87 1.28-.31.57-.55 1.18-.74 1.81-.13.43-.22.88-.28 1.33-.06.51-.08 1.03-.04 1.55.04.5.12 1 .25 1.48.18.68.46 1.34.8 1.95.42.75.95 1.42 1.59 2.02.49.45 1.03.85 1.62 1.17.4.21.82.38 1.25.5.34.1.68.17 1.02.21.69.07 1.37.03 2.06-.13.78-.18 1.54-.48 2.22-.91.46-.29.88-.63 1.27-1.01.55-.52 1-1.12 1.36-1.78.18-.31.33-.64.46-.98.22-.58.35-1.2.42-1.83.02-.23.03-.47.03-.7 0-1.94-.01-3.88-.01-5.81a5.6,5.6,0,0,0,-2.81-4.87c-.88-.58-1.86-.9-2.89-1.02-1.1-.12-2.22-.04-3.33.04Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Dynamic year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('py-2');
+                    header.classList.remove('py-4');
+                } else {
+                    header.classList.add('py-4');
+                    header.classList.remove('py-2');
+                }
+            });
+
+            // Donation amount selection
+            const donationAmounts = document.querySelectorAll('.donation-amount');
+            const customAmountInput = document.getElementById('custom-amount');
+
+            donationAmounts.forEach(button => {
+                button.addEventListener('click', () => {
+                    customAmountInput.value = '';
+                    donationAmounts.forEach(btn => btn.classList.remove('border-green-500', 'bg-green-100'));
+                    button.classList.add('border-green-500', 'bg-green-100');
+                });
+            });
+
+            customAmountInput.addEventListener('input', () => {
+                donationAmounts.forEach(btn => btn.classList.remove('border-green-500', 'bg-green-100'));
+            });
+
+            // About Us Image Carousel
+            const carouselImages = document.querySelectorAll('#about-carousel .carousel-image');
+            let currentImageIndex = 0;
+            setInterval(() => {
+                carouselImages[currentImageIndex].classList.remove('active');
+                currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+                carouselImages[currentImageIndex].classList.add('active');
+            }, 4000); // Change image every 4 seconds
+        });
+        lucide.createIcons();
+    </script>
+</body>
+</html>
