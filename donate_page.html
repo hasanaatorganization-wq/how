@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | HASANAAT ORGANIZATION</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-md fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-600">HASANAAT ORGANIZATION</a>
+            <img src="./LOGO_TILL/logo hasanaat.png" width=50 height=25 alt="Hasanaat Logo">
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html#home" class="text-gray-600 hover:text-green-600 transition-colors">Home</a>
+                <a href="index.html#about" class="text-gray-600 hover:text-green-600 transition-colors">About Us</a>
+                <a href="projects.html" class="text-gray-600 hover:text-green-600 transition-colors">Projects</a>
+                <a href="photo_Gallary.html" class="text-gray-600 hover:text-green-600 transition-colors">Gallery</a>
+                <a href="index.html#contact" class="text-gray-600 hover:text-green-600 transition-colors">Contact</a>
+            </nav>
+            <a href="Donate_page.php" class="hidden md:inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover:bg-green-700 transition-transform transform hover:scale-105">
+                Donate Now
+            </a>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+            <a href="index.html#home" class="block py-2 text-gray-600 hover:text-green-600">Home</a>
+            <a href="index.html#about" class="block py-2 text-gray-600 hover:text-green-600">About Us</a>
+            <a href="projects.html" class="block py-2 text-gray-600">Our Projects</a>
+            <a href="photo_Gallary.html" class="block py-2 text-gray-600 hover:text-green-600">Gallery</a>
+            <a href="index.html#contact" class="block py-2 text-gray-600 hover:text-green-600">Contact</a>
+            <a href="Donate_page.php" class="block mt-4 bg-blue-600 text-white text-center font-semibold px-6 py-2 rounded-lg shadow-lg hover:bg-green-700">
+                Donate Now
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Donation Options Section -->
+        <section id="donation-options" class="py-20 bg-white">
+            <div class="container mx-auto px-6 space-y-24">
+
+                <!-- Project 1: Mpesa Buy Goods -->
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="./LOGO_TILL/Till.png" alt="Mpesa Buy Goods" class="w-full h-auto object-cover rounded-xl shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-4">Mpesa Buy Goods</h2>
+                        <p class="text-3xl leading-relaxed">Till No: 5622106</p>
+                        <p class="mt-4 text-gray-600">Use M-Pesa "Buy Goods" option to send your contribution directly.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2: MPESA PAYBILL -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="./LOGO_TILL/Paybill-Poster-Hasanaat_Organization.png" alt="MPESA PAYBILL" class="w-full h-auto object-cover rounded-xl shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-4">MPESA PAYBILL</h2>
+                        <p class="text-2xl mb-2 leading-relaxed">PAYBILL NO: <strong>625625</strong></p>
+                        <p class="text-2xl mb-2 leading-relaxed">ACC NO: <strong>20143611</strong></p>
+                        <p class="text-xl text-gray-700 leading-relaxed">National Bank Of Kenya</p>
+                    </div>
+                </div>
+
+                <!-- Project 3: Lipa na M-Pesa Online (from index.php) -->
+                <div class="flex flex-col md:flex-row items-center gap-12 pt-12">
+                     <div class="md:w-1/2">
+                        <img src="https://techweez.com/wp-content/uploads/2018/03/Lipa-na-M-PESA-1.jpg" alt="Lipa na M-Pesa Online" class="w-full h-auto object-cover rounded-xl shadow-lg">
+                    </div>
+                    <div class="md:w-1/2 bg-gray-100 p-8 rounded-xl shadow-inner">
+                        <h2 class="text-3xl font-bold mb-4">Lipa na M-Pesa Online</h2>
+                        <p class="text-gray-600 mb-6">Enter your phone number and the amount you wish to donate. You will receive an STK push on your phone to confirm the transaction.</p>
+                        
+                        <form action="./stk_initiate.php" method="POST" class="space-y-6">
+                            <div>
+                                <label for="amount" class="block text-sm font-medium text-gray-700">Amount</label>
+                                <input type="text" name="amount" required class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-green-500 focus:ring-green-500" placeholder="e.g., 500">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">M-Pesa Phone Number</label>
+                                <input type="text" name="phone" required class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-green-500 focus:ring-green-500" placeholder="e.g., 254712345678">
+                            </div>
+                         
+                            <div>
+                                <button type="submit" name="submit" value="submit" class="w-full inline-block bg-green-600 text-white font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-green-700 transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-500/50">
+                                    Donate via M-Pesa
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Donation Inquiry Section -->
+        <section id="connect" class="py-20 sm:py-24 bg-gradient-to-br from-teal-50 to-blue-100">
+            <div class="container mx-auto px-6">
+                <!-- Main Card -->
+                <div id="form-card" class="max-w-3xl mx-auto text-center bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-800">
+                        Let's Make a <span class="text-teal-500">Difference Together</span>
+                    </h2>
+                    <p class="mt-6 max-w-xl mx-auto text-lg text-gray-600">
+                        Interested in contributing in other ways? Fill out your details below, and a member of our team will get in touch with you personally.
+                    </p>
+
+                    <!-- This form is correctly linked to your Google Form -->
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSesL6v3hsX8O-senz-YH5Om6KmFLL7VUWzd27I0QjA6fVi_XA/formResponse" method="POST" target="hidden_iframe" class="mt-12 text-left">
+                        <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                            <!-- Full Name Field -->
+                            <div>
+                                <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" name="entry.2005620554" required class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                            </div>
+                            <!-- Email Address Field -->
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" name="entry.1045781291" required class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                            </div>
+                            <!-- Phone Number Field -->
+                            <div class="sm:col-span-2">
+                                <label for="phone-number" class="block text-sm font-medium text-gray-700">Phone number</label>
+                                <input type="text" name="entry.1166974658" class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                            </div>
+                            <!-- Message Field -->
+                            <div class="sm:col-span-2">
+                                <label for="message" class="block text-sm font-medium text-gray-700">How would you like to help?</label>
+                                <textarea name="entry.839337160" rows="4" class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-teal-500 focus:ring-teal-500"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="mt-8 text-center">
+                            <button type="submit" class="w-full sm:w-auto inline-block rounded-full bg-teal-500 px-12 py-4 text-lg font-bold text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-teal-600 focus:outline-none focus:ring-4 focus:ring-teal-500/50">
+                                Send My Info
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Thank You Message (Initially Hidden) -->
+                <div id="thank-you-message" class="hidden max-w-3xl mx-auto text-center bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+                    <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-800">
+                        <span class="text-teal-500">Thank You!</span>
+                    </h2>
+                    <p class="mt-6 max-w-xl mx-auto text-lg text-gray-600">
+                        Your information has been received. We appreciate your interest and will get back to you shortly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
+                <div class="flex-shrink-0">
+                    <h3 class="text-2xl font-bold text-white mb-2">Hasanaat</h3>
+                    <p class="text-gray-400 max-w-sm">Together We Make Change.</p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <ul class="flex space-x-6">
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white">Projects</a></li>
+                        <li><a href="Donate_page.php" class="text-gray-400 hover:text-white">Donate</a></li>
+                    </ul>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-8 border-t border-green-700 pt-6 text-center text-gray-400 text-sm">
+                &copy; <span id="year"></span> HASANAAT ORGANIZATION. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Dynamic year for footer
+            const yearEl = document.getElementById('year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+
+            // Google Form submission handler
+            let formSubmitted = false;
+            const inquiryForm = document.querySelector('form[target="hidden_iframe"]');
+            const hiddenIframe = document.getElementById('hidden_iframe');
+
+            if (inquiryForm) {
+                inquiryForm.addEventListener('submit', function() {
+                    formSubmitted = true;
+                });
+            }
+            
+            if (hiddenIframe) {
+                hiddenIframe.addEventListener('load', function() {
+                    if (formSubmitted) {
+                        const formCard = document.getElementById('form-card');
+                        const thankYouMessage = document.getElementById('thank-you-message');
+                        if(formCard) formCard.classList.add('hidden');
+                        if(thankYouMessage) thankYouMessage.classList.remove('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
