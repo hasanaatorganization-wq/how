@@ -82,7 +82,7 @@
                 <!-- Project 3: Lipa na M-Pesa Online -->
                 <div class="flex flex-col md:flex-row items-center gap-12 pt-12">
                      <div class="md:w-1/2">
-                        <img src="https://techweez.com/wp-content/uploads/2018/03/Lipa-na-M-PESA-1.jpg" alt="Lipa na M-Pesa Online" class="w-full h-auto object-cover rounded-xl shadow-lg">
+                        <img src="images/1200px-M-PESA_LOGO-01.svg.png" alt="Lipa na M-Pesa Online" class="w-full h-auto object-cover rounded-xl shadow-lg">
                     </div>
                     <div class="md:w-1/2 bg-gray-100 p-8 rounded-xl shadow-inner">
                         <h2 class="text-3xl font-bold mb-4">Lipa na M-Pesa Online</h2>
@@ -124,26 +124,26 @@
                     </p>
 
                     <!-- This form is correctly linked to your Google Form -->
-                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSduYjyv9QMs-z31EpTp6LAbF0rpCckbTBifenApwbPNxj375w/viewform?usp=header" method="POST" target="hidden_iframe" class="mt-12 text-left">
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSduYjyv9QMs-z31EpTp6LAbF0rpCckbTBifenApwbPNxj375w/formResponse" method="POST" target="hidden_iframe" class="mt-12 text-left">
                         <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                             <!-- Full Name Field -->
                             <div>
-                                <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <label for="full-name" class="block text-sm font-medium text-gray-700">Name</label>
                                 <input type="text" name="entry.2005620554" required class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-teal-500 focus:ring-teal-500">
                             </div>
                             <!-- Email Address Field -->
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                                <input type="email" name="entry.1045781291" required class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                                <input type="email" name="entry.1045781291" class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-teal-500 focus:ring-teal-500">
                             </div>
                             <!-- Phone Number Field -->
                             <div class="sm:col-span-2">
                                 <label for="phone-number" class="block text-sm font-medium text-gray-700">Phone number</label>
                                 <input type="text" name="entry.1166974658" class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-teal-500 focus:ring-teal-500">
                             </div>
-                            <!-- Message Field -->
+                            <!-- Comments Field -->
                             <div class="sm:col-span-2">
-                                <label for="message" class="block text-sm font-medium text-gray-700">How would you like to help?</label>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Comments</label>
                                 <textarea name="entry.839337160" rows="4" class="mt-1 block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-teal-500 focus:ring-teal-500"></textarea>
                             </div>
                         </div>
@@ -226,6 +226,10 @@
             if (inquiryForm) {
                 inquiryForm.addEventListener('submit', function() {
                     formSubmitted = true;
+                    // Optional: Reset the form after a delay to allow submission
+                    setTimeout(() => {
+                        inquiryForm.reset();
+                    }, 100);
                 });
             }
             
@@ -236,6 +240,9 @@
                         const thankYouMessage = document.getElementById('thank-you-message');
                         if(formCard) formCard.classList.add('hidden');
                         if(thankYouMessage) thankYouMessage.classList.remove('hidden');
+                        
+                        // Reset the state so the form can be shown again if needed
+                        formSubmitted = false; 
                     }
                 });
             }
