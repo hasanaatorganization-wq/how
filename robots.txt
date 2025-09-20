@@ -1,0 +1,6 @@
+Allow all web crawlers access to the site
+User-agent: *
+Allow: /
+
+Point crawlers to the sitemap
+Sitemap: https://www.google.com/search?q=https://hasanaatorganization.com/sitemap.xml
